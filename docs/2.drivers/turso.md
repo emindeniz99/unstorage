@@ -38,19 +38,19 @@ const storage = createStorage({
     authToken: "your-auth-token", // or set TURSO_AUTH_TOKEN env
     // Optional: prefix for all keys (namespacing)
     // base: "unstorage",
+    version: "1", // Version of the driver, used for compatibility checks.
   }),
 });
 ```
+
 
 **Table Initialization**
 
 The Turso driver provides a helper function to create the required table if it does not exist:
 
 ```ts
-import { createClient } from "@libsql/client";
 import { initTursoTableIfNotExists } from "unstorage/drivers/turso";
 
-const client = createClient({ url: "your-database-url", authToken: "your-auth-token", table: "kv"});
 await initTursoTableIfNotExists(client, "kv"); // Creates the 'kv' table if missing
 ```
 

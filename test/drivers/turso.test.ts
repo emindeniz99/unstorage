@@ -32,6 +32,7 @@ for (const base of baseConfigs) {
         authToken: token,
         table: tableName,
         base,
+        version: "1",
       });
       beforeAll(async () => {
         await resetTursoTable(driver, tableName);
@@ -57,6 +58,7 @@ for (const base of baseConfigs) {
       const driver = tursoDriver({
         table: tableName,
         base,
+        version: "1",
       });
       testDriver({
         driver: driver,
@@ -67,6 +69,7 @@ for (const base of baseConfigs) {
         url: ":memory:",
         table: tableName,
         base,
+        version: "1",
       });
       beforeAll(async () => {
         await resetTursoTable(driver, tableName);
@@ -82,6 +85,7 @@ for (const base of baseConfigs) {
         url: `file:${dir}/db-file.db`,
         table: tableName,
         base,
+        version: "1",
       });
       beforeAll(async () => {
         await resetTursoTable(driver, tableName);
