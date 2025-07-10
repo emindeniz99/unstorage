@@ -115,6 +115,7 @@
     "@azure/storage-blob": "^12.26.0",
     "@capacitor/preferences": "^6.0.3 || ^7.0.0",
     "@deno/kv": ">=0.9.0",
+    "@libsql/client": "^0.15.9",
     "@netlify/blobs": "^6.5.0 || ^7.0.0 || ^8.1.0",
     "@planetscale/database": "^1.19.0",
     "@upstash/redis": "^1.34.3",
